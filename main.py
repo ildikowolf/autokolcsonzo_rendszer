@@ -21,7 +21,7 @@ auto2 = jarmu.auto_felvetel(
     )
 
 auto3 = jarmu.auto_felvetel(
-        tipus="Személyautó",
+        tipus="személyautó",
         rendszam="JHG-777",
         marka="Volkswagen",
         szin="kék",
@@ -30,7 +30,7 @@ auto3 = jarmu.auto_felvetel(
 )
 
 auto4 = jarmu.auto_felvetel(
-        tipus="Teherautó",
+        tipus="teherautó",
         rendszam="TRK-220",
         marka="MAN",
         szin="szürke",
@@ -39,7 +39,7 @@ auto4 = jarmu.auto_felvetel(
 )
 
 auto5 = jarmu.auto_felvetel(
-        tipus="Személyautó",
+        tipus="személyautó",
         rendszam="MNO-444",
         marka="BMW",
         szin="fekete",
@@ -48,7 +48,7 @@ auto5 = jarmu.auto_felvetel(
 )
 
 auto6 = jarmu.auto_felvetel(
-        tipus="Teherautó",
+        tipus="teherautó",
         rendszam="FGT-902",
         marka="Mercedes",
         szin="sárga",
@@ -57,7 +57,7 @@ auto6 = jarmu.auto_felvetel(
 )
 
 auto7 = jarmu.auto_felvetel(
-        tipus="Személyautó",
+        tipus="személyautó",
         rendszam="KLP-330",
         marka="Honda",
         szin="fehér",
