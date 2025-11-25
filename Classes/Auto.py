@@ -2,8 +2,7 @@ from abc import ABC, abstractmethod
 
 # Ősosztály
 class Auto(ABC):
-    def __init__(self, rendszam, tipus, berleti_dij):
-        self._rendszam = rendszam
+    def __init__(self, tipus, berleti_dij):
         self._tipus = tipus
         self._berleti_dij = berleti_dij
 
