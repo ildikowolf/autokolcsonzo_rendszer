@@ -2,7 +2,7 @@ from Classes.Szemelyauto import Szemelyauto
 from Classes.Teherauto import Teherauto
 
 class Berles:
-    def __init__(self):
+    def __init__(self, kolcsonzo):
         self._kolcsonzo = kolcsonzo
 
     def auto_felvetel(self, rendszam, marka, tipus, szin, evjarat, berleti_dij):

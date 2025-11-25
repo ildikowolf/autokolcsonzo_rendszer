@@ -1,8 +1,10 @@
 from Classes.Berles import Berles
+from Classes.Autokolcsonzo import Autokolcsonzo
 
-jarmu = Berles()
+kolcsonzo = Autokolcsonzo("BudaRent", "Budapest", 10)
+berles = Berles(kolcsonzo)
 
-auto1 = jarmu.auto_felvetel(
+auto1 = berles.auto_felvetel(
         tipus="személyautó",
         rendszam="ABC-123",
         marka="Toyota Corolla",
@@ -11,7 +13,7 @@ auto1 = jarmu.auto_felvetel(
         berleti_dij=8000
     )
 
-auto2 = jarmu.auto_felvetel(
+auto2 = berles.auto_felvetel(
         tipus="teherautó",
         rendszam="XYZ-555",
         marka="Ford Transit",
@@ -20,7 +22,7 @@ auto2 = jarmu.auto_felvetel(
         berleti_dij=15000
     )
 
-auto3 = jarmu.auto_felvetel(
+auto3 = berles.auto_felvetel(
         tipus="személyautó",
         rendszam="JHG-777",
         marka="Volkswagen Minivan",
@@ -29,7 +31,7 @@ auto3 = jarmu.auto_felvetel(
         berleti_dij=9000
 )
 
-auto4 = jarmu.auto_felvetel(
+auto4 = berles.auto_felvetel(
         tipus="teherautó",
         rendszam="TRK-220",
         marka="MAN eTGS",
@@ -38,7 +40,7 @@ auto4 = jarmu.auto_felvetel(
         berleti_dij=18000
 )
 
-auto5 = jarmu.auto_felvetel(
+auto5 = berles.auto_felvetel(
         tipus="személyautó",
         rendszam="MNO-444",
         marka="BMW 320",
@@ -47,7 +49,7 @@ auto5 = jarmu.auto_felvetel(
         berleti_dij=20000
 )
 
-auto6 = jarmu.auto_felvetel(
+auto6 = berles.auto_felvetel(
         tipus="teherautó",
         rendszam="FGT-902",
         marka="Mercedes Sprinter",
@@ -56,7 +58,7 @@ auto6 = jarmu.auto_felvetel(
         berleti_dij=16000
 )
 
-auto7 = jarmu.auto_felvetel(
+auto7 = berles.auto_felvetel(
         tipus="személyautó",
         rendszam="KLP-330",
         marka="Honda Civic",
@@ -65,6 +67,15 @@ auto7 = jarmu.auto_felvetel(
         berleti_dij=11000
 )
 
+while True:
+    tipus = input("Adja meg a jármű típusát ('személyautó' vagy 'teherautó'): ").lower().strip()
 
-print(auto1)
-print(auto3)
+    if tipus in ("személyautó", "szemelyauto", "teherautó", "teherauto"):
+        break
+    else:
+        print("Ismeretlen jármű. Kérem 'személyautó'-t vagy 'teherautó'-t adjon meg.\n")
+
+#print(auto1)
+#print(auto3)
+
+kolcsonzo.autok_listazasa()
