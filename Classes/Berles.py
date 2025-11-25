@@ -8,11 +8,11 @@ class Berles:
     def auto_felvetel(self, rendszam, marka, tipus, szin, evjarat, berleti_dij):
         try:
             if tipus == 'személyautó':
-                return Szemelyauto(rendszam, marka, tipus, szin, evjarat, berleti_dij)
+                auto = Szemelyauto(rendszam, marka, tipus, szin, evjarat, berleti_dij)
             elif tipus == 'teherautó':
-                return Teherauto(rendszam, marka, tipus, szin, evjarat, berleti_dij)
+                auto = Teherauto(rendszam, marka, tipus, szin, evjarat, berleti_dij)
             else:
-                raise ValueError("Hibás autótípus!")
+                raise ValueError("Hibás adat!")
             
             self._kolcsonzo.auto_hozzaadas(auto)
             return auto

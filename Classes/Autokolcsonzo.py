@@ -25,8 +25,8 @@ class Autokolcsonzo:
     def auto_hozzaadas(self, auto):
         if len(self._autok) >= self._kapacitas:
             raise ValueError("A kölcsönző megtelt, nem vehető fel több autó.")
-
-        self._autok.append(auto)
+        else:
+            self._autok.append(auto)
 
     # autók listázása
     def autok_listazasa(self):
@@ -35,6 +35,14 @@ class Autokolcsonzo:
         else:
             for auto in self._autok:
                 print(auto)
+
+        szemelyauto = sum(1 for sz in self._autok
+                          if sz._tipus == "személyautó")
+        teherauto = sum(1 for t in self._autok
+                        if t._tipus == "teherautó")
+        
+        print(f"\nBérelhető személyautók: {szemelyauto}")
+        print(f"Bérelhető teherautók: {teherauto}")
 
     def __str__(self):
         return f"{self._nev} ({self._tartozkodasi_hely}) — {len(self._autok)}/{self._kapacitas} autó"
