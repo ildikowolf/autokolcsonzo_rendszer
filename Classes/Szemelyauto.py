@@ -15,4 +15,4 @@ class Szemelyauto(Auto):
         pass
 
     def __str__(self):
-        return f"{self._marka} {self._tipus} ({self._rendszam}) - {self._berleti_dij} Ft/nap"
+        return f"{self._marka} {self._tipus} - {self._berleti_dij} Ft/nap"
