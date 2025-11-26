@@ -5,6 +5,8 @@ class Berles:
     def __init__(self, kolcsonzo):
         self._kolcsonzo = kolcsonzo
 
+    """
+    # ez nem is ide kell
     def auto_felvetel(self, rendszam, marka, tipus, szin, evjarat, berleti_dij):
         while True:
             try:
@@ -20,3 +22,13 @@ class Berles:
             
             except Exception as e:
                 print(f"Ismeretlen hiba: {e}")
+    """    
+            
+    def berles_felvetele(self, rendszam):
+        for auto in self._kolcsonzo.autok:
+            if auto._rendszam == rendszam:
+                ar = auto.auto_berles()
+                if ar > 0:
+                    print(f"A bérleti díj: {ar} Ft/nap")
+                    
+        print("Ilyen rendszámú autó nincs a kölcsönzőben.")

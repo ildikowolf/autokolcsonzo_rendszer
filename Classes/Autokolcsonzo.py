@@ -24,24 +24,12 @@ class Autokolcsonzo:
     def autok(self):
         return self._autok
     
-    """
-    # autó hozzáadása
-    def auto_hozzaadas(self, auto):
+    # autó hozzáadása kölcsönzőhöz
+    def auto_hozzaadas_kolcsonzohoz(self, auto):
         if len(self._autok) >= self._kapacitas:
             raise ValueError("A kölcsönző megtelt, nem vehető fel több autó.")
         else:
             self._autok.append(auto)
-            print("Autó sikeresen hozzáadva a kölcsönzőhöz.")
-
-    # autó törlése
-    def auto_torles(self, rendszam):
-        for auto in self._autok:
-            if auto.rendszam == rendszam:
-                self._autok.remove(auto)
-                print(f"Autó sikeresen törölve.")
-            else:
-                print("Ilyen rendszámú autó nincs a kölcsönzőben.")
-    """
 
     # autók listázása
     def autok_listazasa(self):

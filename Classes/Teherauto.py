@@ -16,9 +16,16 @@ class Teherauto(Auto):
         self._marka = marka
         self._szin = szin
         self._evjarat = evjarat
+        self._berelt = False
 
     def auto_berles(self):
-        pass
+        if self.berelt:
+            print(f"Ez a jármű ({self._rendszam}) már ki van bérelve.")
+            return
+        else:
+            self.berelt = True
+            print(f"A(z) {self._rendszam} rendszámú autó sikeresen kibérelve.")
+            return self._berleti_dij 
 
     def auto_berles_lemondas(self):
         pass

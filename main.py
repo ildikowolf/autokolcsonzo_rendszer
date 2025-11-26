@@ -1,3 +1,4 @@
+from Classes.Berles import Berles
 from alap_felallas import alap_adatok_betoltese
 
 kolcsonzo = alap_adatok_betoltese()
@@ -18,7 +19,9 @@ while True:
     valasztas = input("\nVálasztás: ").strip()
 
     if valasztas == "1":
-        pass
+        rendszam = input("Adja meg a bérelni kívánt autó rendszámát: ").strip().upper()
+        kolcsonzo_berles = Berles(kolcsonzo)
+        kolcsonzo_berles.berles_felvetele(rendszam)
 
     elif valasztas == "2":
         pass
