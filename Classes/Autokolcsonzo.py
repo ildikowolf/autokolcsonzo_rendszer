@@ -1,5 +1,8 @@
 class Autokolcsonzo:
     def __init__(self, nev, tartozkodasi_hely, kapacitas):
+        if kapacitas < 0:
+            raise ValueError("A kapacitás nem lehet negatív!")
+        
         self._nev = nev
         self._tartozkodasi_hely = tartozkodasi_hely
         self._kapacitas = kapacitas
@@ -33,6 +36,7 @@ class Autokolcsonzo:
         if not self._autok:
             print("Nincs autó a kölcsönzőben.")
         else:
+            print(f"A(z) {self._nev} kölcsönzőben a következő járművek bérelhetők:\n")
             for auto in self._autok:
                 print(auto)
 

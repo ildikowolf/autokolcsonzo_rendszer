@@ -1,8 +1,18 @@
 from Classes.Auto import Auto
+from datetime import datetime
 
 class Teherauto(Auto):
     def __init__(self, rendszam, marka, tipus, szin, evjarat, berleti_dij):
+        if berleti_dij <= 0:
+            raise ValueError("A bérleti díjnak 0-nál nagyobbnak kell lennie!")
+
+        # 2010-nél ne legyen régebbi
+        aktualis_ev = datetime.now().year
+        if evjarat < 2010 or evjarat > aktualis_ev:
+            raise ValueError(f"Az évjáratnak (teherautónál) 2010 és {aktualis_ev} között kell lennie!")
+        
         super().__init__(tipus, berleti_dij)
+
         self._rendszam = rendszam
         self._marka = marka
         self._szin = szin

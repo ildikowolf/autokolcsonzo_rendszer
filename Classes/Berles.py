@@ -12,10 +12,10 @@ class Berles:
             elif tipus == 'teherautó':
                 auto = Teherauto(rendszam, marka, tipus, szin, evjarat, berleti_dij)
             else:
-                raise ValueError("Hibás adat!")
+                raise ValueError("Hibás jármű adat!")
             
             self._kolcsonzo.auto_hozzaadas(auto)
             return auto
         
         except Exception as e:
-            print(f"Ismeretlen hiba történt: {e}")
+            print(f"Ismeretlen hiba: {e}")
