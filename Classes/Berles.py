@@ -28,7 +28,8 @@ class Berles:
         for auto in self._kolcsonzo.autok:
             if auto._rendszam == rendszam:
                 ar = auto.auto_berles()
-                if ar > 0:
+                if ar is not None:
                     print(f"A bérleti díj: {ar} Ft/nap")
-                    
+                return
+                   
         print("Ilyen rendszámú autó nincs a kölcsönzőben.")
