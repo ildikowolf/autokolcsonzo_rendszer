@@ -11,9 +11,8 @@ class Teherauto(Auto):
         if evjarat < 2010 or evjarat > aktualis_ev:
             raise ValueError(f"Az évjáratnak (teherautónál) 2010 és {aktualis_ev} között kell lennie!")
         
-        super().__init__(tipus, berleti_dij)
+        super().__init__(rendszam, tipus, berleti_dij)
 
-        self._rendszam = rendszam
         self._marka = marka
         self._szin = szin
         self._evjarat = evjarat
