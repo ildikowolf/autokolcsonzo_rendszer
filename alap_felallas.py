@@ -78,4 +78,7 @@ def alap_adatok_betoltese():
     kolcsonzo.auto_hozzaadas_kolcsonzohoz(auto6)
     kolcsonzo.auto_hozzaadas_kolcsonzohoz(auto7)
 
+    for auto in kolcsonzo.autok[:4]:
+        auto._berelt = True
+
     return kolcsonzo
