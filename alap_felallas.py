@@ -13,7 +13,8 @@ def alap_adatok_betoltese():
         marka="Toyota Corolla",
         szin="piros",
         evjarat=2018,
-        berleti_dij=8000
+        berleti_dij=8000,
+        ferohely=5
     )
 
     auto2 = Teherauto(
@@ -22,7 +23,8 @@ def alap_adatok_betoltese():
         marka="Ford Transit",
         szin="fehér",
         evjarat=2020,
-        berleti_dij=15000
+        berleti_dij=15000,
+        teherbiras=3000
     )
 
     auto3 = Szemelyauto(
@@ -31,7 +33,8 @@ def alap_adatok_betoltese():
         marka="Volkswagen Minivan",
         szin="kék",
         evjarat=2016,
-        berleti_dij=9000
+        berleti_dij=9000,
+        ferohely=7
     )
 
     auto4 = Teherauto(
@@ -40,7 +43,8 @@ def alap_adatok_betoltese():
         marka="MAN eTGS",
         szin="szürke",
         evjarat=2019,
-        berleti_dij=18000
+        berleti_dij=18000,
+        teherbiras=5000
     )
 
     auto5 = Szemelyauto(
@@ -49,7 +53,8 @@ def alap_adatok_betoltese():
         marka="BMW 320",
         szin="fekete",
         evjarat=2022,
-        berleti_dij=20000
+        berleti_dij=20000,
+        ferohely=5
     )
 
     auto6 = Teherauto(
@@ -58,7 +63,8 @@ def alap_adatok_betoltese():
         marka="Mercedes Sprinter",
         szin="sárga",
         evjarat=2017,
-        berleti_dij=16000
+        berleti_dij=16000,
+        teherbiras=3500
     )
 
     auto7 = Szemelyauto(
@@ -67,8 +73,10 @@ def alap_adatok_betoltese():
         marka="Honda Civic",
         szin="fehér",
         evjarat=2021,
-        berleti_dij=11000
+        berleti_dij=11000,
+        ferohely=5
     )
+
 
     kolcsonzo.auto_hozzaadas_kolcsonzohoz(auto1)
     kolcsonzo.auto_hozzaadas_kolcsonzohoz(auto2)
