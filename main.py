@@ -1,13 +1,34 @@
 from alap_felallas import alap_adatok_betoltese
 
 kolcsonzo = alap_adatok_betoltese()
-"""
-while True:
-    tipus = input("Adja meg a jármű típusát ('személyautó' vagy 'teherautó'): ").lower().strip()
 
-    if tipus in ("személyautó", "szemelyauto", "teherautó", "teherauto"):
-        break
-    else:
-        print("Ismeretlen jármű. Kérem 'személyautó'-t vagy 'teherautó'-t adjon meg.\n")
-"""
+print("\nAutókölcsönző Rendszer by ildikowolf")
+
 kolcsonzo.autok_listazasa()
+
+def menu():
+    print("\nVálasszon az alábbi opciók közül:")
+    print("1 - Autó bérlése")
+    print("2 - Bérlés lemondása")
+    print("3 - Bérlések listázása")
+    print("4 - Kilépés")
+
+while True:
+    menu()
+    valasztas = input("\nVálasztás: ").strip()
+
+    if valasztas == "1":
+        pass
+
+    elif valasztas == "2":
+        pass
+
+    elif valasztas == "3":
+        pass
+
+    elif valasztas == "4":
+        print("Viszontlátásra!")
+        break
+
+    else:
+        print("Érvénytelen bemenet!")
